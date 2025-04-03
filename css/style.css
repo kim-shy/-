@@ -105,12 +105,14 @@ a { text-decoration: none; color: inherit;}
 
   .suggest-box {
     position: absolute;
+    top: 100%;
+    left: 0;
     background: white;
     border-radius: 8px;
-    width: calc(100% - 40px);
+    width: 100%;
     z-index: 100;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    margin-top: 80px;
+    margin-top: 4px;
   }
   .suggest-box div {
     padding: 10px;
@@ -140,7 +142,6 @@ a { text-decoration: none; color: inherit;}
     font-size: 1em;
     cursor: pointer;
   }
-  
   .mode-select {
     display: flex;
     justify-content: space-between;
@@ -235,6 +236,13 @@ a { text-decoration: none; color: inherit;}
     color: #666;
     font-size: 0.95em;
     padding-left: 20px;
+  }
+
+  .route-list .info {
+    margin-left: 30px;
+    font-size: 0.9em;
+    color: #777;
+    text-align: right;
   }
   
   footer {

@@ -30,6 +30,13 @@ function selectSuggestion(place, type) {
   document.getElementById(type + "Suggestions").innerHTML = '';
 }
 
+function swapInputs() {
+  const fromInput = document.getElementById("fromInput");
+  const toInput = document.getElementById("toInput");
+  const temp = fromInput.value;
+  fromInput.value = toInput.value;
+  toInput.value = temp;
+}
 
 function showRouteResults() {
     const from = document.getElementById("fromInput").value;
