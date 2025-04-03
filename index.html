@@ -42,7 +42,9 @@
         <div class="input-group">
           <i class="fas fa-location-arrow"></i>
           <input type="text" id="fromInput" placeholder="출발지 입력" oninput="showSuggestions(this.value, 'from')">
-          <button><i class="fas fa-search"></i></button>
+          <button aria-label="검색">
+            <i class="fas fa-search"></i>
+          </button>
           <div class="suggest-box" id="fromSuggestions"></div>
         </div>
         <button class="switch-button">⇄</button>
