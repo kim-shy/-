@@ -6,6 +6,7 @@
   <title>MobilLax - 상세 경로</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <link href="css/route.css" type="text/css" rel="stylesheet"></link>
+  <script src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=bbdb927adb59e986a99547b4bf19429a"></script>
   <script>
     // 페이지 로드 시 URL 파라미터로 경로 타입 받아 타이틀 변경
     window.onload = function () {
@@ -22,8 +23,20 @@
         if (heading) heading.textContent = titleMap[type];
       }
     };
+    document.addEventListener('DOMContentLoaded', function () {
+      const container = document.getElementById('map');
+      if (!container) {
+        console.error('❌ map 요소를 찾을 수 없습니다!');
+      return;
+    }
+
+    const options = {
+      center: new kakao.maps.LatLng(37.5665, 126.9780),
+      level: 4
+    };
+    const map = new kakao.maps.Map(container, options);
+  });
   </script>
-  <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=bbdb927adb59e986a99547b4bf19429a"></script>
 </head>
 <body>
     <div class="sidebar">
@@ -51,14 +64,8 @@
             <p>도보 약 4분</p>
         </div>
     </div>
-    <script>
-      const container = document.getElementById('map');
-      const options = {
-        center: new kakao.maps.LatLng(37.881157, 127.723027), // 남춘천역
-        level: 3 // 숫자 높을수록 더 넓게 보임
-      };
-      const map = new kakao.maps.Map(container, options);
-    </script>
-    
+    <div class="map-area">
+      <div id="map"></div>
+    </div>    
 </body>
 </html>
