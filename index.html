@@ -9,6 +9,18 @@
   <script src="javascript/jquery-1.12.3.js"></script>
   <script src="javascript/script.js"></script> 
   <script src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=bbdb927adb59e986a99547b4bf19429a&libraries=services"></script>
+  <script>
+    window.onload = function() {
+      if (typeof kakao === 'undefined') {
+        alert('카카오맵 SDK 로드 안 됨');
+      } else {
+        const ps = new kakao.maps.services.Places();
+        ps.keywordSearch('강남', function(data, status) {
+          console.log('결과:', data, '상태:', status);
+        });
+      }
+    }
+    </script>
 </head>
 <body>
   <header>
