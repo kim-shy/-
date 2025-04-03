@@ -24,14 +24,6 @@
     };
   </script>
   <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=bbdb927adb59e986a99547b4bf19429a"></script>
-  <script>
-    const container = document.getElementById('map');
-    const options = {
-      center: new kakao.maps.LatLng(37.881157, 127.723027), // 남춘천역
-      level: 3 // 숫자 높을수록 더 넓게 보임
-    };
-    const map = new kakao.maps.Map(container, options);
-  </script>
 </head>
 <body>
     <div class="sidebar">
@@ -59,6 +51,14 @@
             <p>도보 약 4분</p>
         </div>
     </div>
+    <script>
+      const container = document.getElementById('map');
+      const options = {
+        center: new kakao.maps.LatLng(37.881157, 127.723027), // 남춘천역
+        level: 3 // 숫자 높을수록 더 넓게 보임
+      };
+      const map = new kakao.maps.Map(container, options);
+    </script>
     
 </body>
 </html>
