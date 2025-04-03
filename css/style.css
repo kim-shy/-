@@ -103,6 +103,32 @@ a { text-decoration: none; color: inherit;}
     cursor: pointer;
   }
 
+  .suggest-box {
+    position: absolute;
+    background: white;
+    border-radius: 8px;
+    width: calc(100% - 40px);
+    z-index: 100;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin-top: 5px;
+  }
+  .suggest-box div {
+    padding: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .suggest-box div:hover {
+    background-color: #f0f0f0;
+  }
+  .suggest-box i {
+    color: #2f80ed;
+  }
+  .input-group {
+    position: relative;
+  }
+
   .find-route-button {
     margin: 20px auto 10px;
     display: block;
